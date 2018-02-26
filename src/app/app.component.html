@@ -1,0 +1,47 @@
+<div class="container text-center">
+  <h1>{{title}}</h1>
+</div>
+<div class="container">
+
+
+  <div class="row text-right">
+    Sort by:
+    <span (click)="sort('name')" class="by-name">Name</span>
+    <span *ngIf="key === 'name'">
+      <span *ngIf="reverse">
+          <i class="fa fa-arrow-up" aria-hidden="true"></i>
+      </span>
+      <span *ngIf="!reverse">
+        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+      </span>
+    </span>
+    <span (click)="sort('country')" class="by-country">Country</span>
+    <span *ngIf="key === 'country'">
+      <span *ngIf="reverse">
+          <i class="fa fa-arrow-up" aria-hidden="true"></i>
+      </span>
+      <span *ngIf="!reverse">
+        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+      </span>
+    </span>
+  </div>
+
+  <div class="row">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>Id</th>
+        <th>Hero Name</th>
+        <th>Country</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let hero of heroes | orderBy: key : reverse">
+        <td>{{hero.id}}</td>
+        <td>{{hero.name}}</td>
+        <td>{{hero.country}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
