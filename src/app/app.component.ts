@@ -27,7 +27,7 @@ export class AppComponent {
 
   key = 'name'; // sort default by name
   reverse = false;
-  sort(key) {
+  sortList(key) {
     this.key = key;
     this.reverse = !this.reverse;
   }
