@@ -3,9 +3,9 @@
 Steps to achieve sorting in angular project are as below:
 
 1. Install the required packages
-  ```sh
-  npm install ng2-order-pipe --save
-  ```
+    ```sh
+    npm install ng2-order-pipe --save
+    ```
 
 2. Import Ng2OrderModule
 
